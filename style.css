@@ -1,0 +1,131 @@
+/* Overall page styling */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  text-align: center;
+  background: linear-gradient(#5992b8, #80969c);
+  display: flex;
+  flex-direction: column;
+  min-height: 93vh;
+}
+
+/*Background image*/
+.background-image {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('img/Worldmap.png') no-repeat center center;
+  background-size: cover;
+  z-index: -1;
+  opacity: .5; 
+}
+
+/* Header */
+h1 {
+  margin-bottom: 20px;
+  color: black;
+  text-shadow: 2px 2px 8px white;
+}
+
+/* Input box */
+input {
+  padding: 10px;
+  width: 200px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  color: black;
+  background-color: #c1e6fd;
+}
+
+input::placeholder {
+  color: #818181; 
+}
+
+/* Search button */
+button {
+  padding: 10px;
+  margin-left: 5px;
+  background-color: #9ce0f8;
+  color: black;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Button on click or hover */
+button:active,
+button:hover {
+  background-color: #7fd0f8;
+}
+
+/* Result container */
+.country-info {
+  margin-top: 20px;
+  padding: 20px;
+  text-align: left;
+  max-width: 400px;
+  background: #c1e6fd;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+  color: black;
+}
+
+/* Flag styling */
+.country-info img {
+  width: 150px;
+  margin-bottom: 10px;
+  border-radius: 16px;
+}
+
+#result {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Footer */
+footer {
+  margin-top: auto;
+  text-align: center;
+  font-size: 14px;
+  color: black;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #add8e6;
+  text-decoration: underline;
+}
+
+/* Mobile responsiveness*/
+@media (max-width: 600px) {
+  input {
+    display: block;
+    margin: 0 auto;
+    width: 90%;
+  }
+
+  button {
+    display: block;
+    margin: 20px auto 0;
+    width: auto;
+  }
+
+  #result {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .country-info {
+    width: 90%;
+  }
+}
